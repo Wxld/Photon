@@ -17,7 +17,7 @@ form.addEventListener("submit",(e)=>{
 more.addEventListener("click",loadMore);
 
 function updateInput(e){
-    console.log(e.target.value);
+    //console.log(e.target.value);
     searchValue = e.target.value;
 }
 
@@ -56,7 +56,7 @@ async function curatedPhotos(){
 
 async function searchPhotos(query){
     clear();
-    etchLink = `https://api.pexels.com/v1/search?query=${query}&per_page=15&page=1`;
+    fetchLink = `https://api.pexels.com/v1/search?query=${query}&per_page=15&page=1`;
     const data = await fetchApi(fetchLink);
     addImg(data);
 }
